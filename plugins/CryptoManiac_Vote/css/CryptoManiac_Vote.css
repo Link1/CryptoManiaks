@@ -1,0 +1,61 @@
+#voting_front, 
+#cmpositive, 
+#cmnegative{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+#voting_front p, 
+#cmpositive, 
+#cmnegative {display: inline-block;}
+
+#cmpositive, 
+#cmnegative {
+    border:2px solid black;
+    padding: 0 10px 6px;
+    margin-left: 10px;
+    border-radius: 6px;
+    opacity: 0.6;
+    transition: all 0.5s;
+    max-width: 100px;
+}
+
+#cmpositive:hover, 
+#cmnegative:hover{
+    border:2px solid blue;
+    color: blue;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#cmpositive:hover:before, 
+#cmnegative:hover:before{
+    color: blue !important;
+    fill: blue !important;
+} 
+
+#cmpositive:before,
+#cmnegative:before {
+    position: relative;
+    top: 5px;    
+    padding-right: 8px;
+    color: red !important;
+    fill: red !important;
+}
+
+#cmpositive:before {
+   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.5 8c.828 0 1.5.671 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.671-1.5-1.5.672-1.5 1.5-1.5zm-7 0c.828 0 1.5.671 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.671-1.5-1.5.672-1.5 1.5-1.5zm3.501 10c-2.801 0-4.874-1.846-6.001-3.566l.493-.493c1.512 1.195 3.174 1.931 5.508 1.931 2.333 0 3.994-.736 5.506-1.931l.493.493c-1.127 1.72-3.199 3.566-5.999 3.566z' fill='currentColor'/%3E%3C/svg%3E"); 
+}
+
+
+#cmnegative:before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.5 8c.828 0 1.5.671 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.671-1.5-1.5.672-1.5 1.5-1.5zm-7 0c.828 0 1.5.671 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.671-1.5-1.5.672-1.5 1.5-1.5zm8.122 9.377c-1.286-.819-2.732-1.308-4.622-1.308s-3.336.489-4.622 1.308l-.471-.58c.948-1.161 2.761-2.797 5.093-2.797s4.145 1.636 5.093 2.797l-.471.58z'/%3E%3C/svg%3E");
+}
+
+@media screen and (max-width:768px){
+    #voting_front p, #voting_front b {display: block; text-align: center;}
+    #voting_front b {margin-bottom: 10px}
+    #cmpositive, #cmnegative, .voting-button {width:190px; max-width: 190px; display: inline-block;}
+}
